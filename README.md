@@ -1,12 +1,10 @@
 # Night Vision Data
 
  Night Vision Data is a web app that will mostly work with Governments data to make informations more Open and Presentable to citizens and society so that they can clearly understand what’s happening under the hood.
+ This plateform will help 'unjailing' the data. A sort of collaborative data crowdsourcing.
 
- * In some countries, data released by Gov exists in an unsable format PDF, Images... that's why this platform will contain 'Jailed' data section where contributors can set the data free and in return get points for doing so.
- 
- * Another issue is that if we want to check data related to a foreign country specially we will find a hard time doing so that's why this app will aggregate all the trusted data related to a country and to a certain field.
-
- * We're also gone try Visualize the existing data in the platform dynamically. 
+ * People will find data in the format of PDF or Image ... and they will collaborate to make it in an exploitable format
+ * We will start by creating a crowdsourcing Plateform for the Tunisian municipal election of 06-05-2018 and we will try to make it as generic as possible to extend the crowdsourcing to different other data.
  
 ## Welcome !
 

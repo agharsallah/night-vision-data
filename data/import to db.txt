@@ -1,0 +1,1 @@
+mongoimport --db chaier-crowdsource --collection lists --type json  --file  ./Ariana.json --jsonArray

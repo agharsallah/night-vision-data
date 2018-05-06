@@ -27,7 +27,11 @@ This project adheres to  [Mozilla Community Participation Guidelines](https://ww
 4. Start the backend server (node.js) go to `./backend` and type `npm start`
 5. Start the front-end (React - webpack) go to `./ frontend ` and type `npm start`
 6. open the browser ` localhost:3000`
-
+## Deploy
+1. Host the Rest api on a server
+2. Change the config file server link under `./frontend/src/components/config.js` 
+3. whange `webpack.config-build` to `webpack.config` and instead of `npm start ` run `webpack`
+    * the bundle file will be generated under `./frontend/dist/static`
 
 ## Licence
 [MIT](LICENSE)

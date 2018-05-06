@@ -51,4 +51,26 @@ router.get('/get_lists', (req, res) => {
   })
 
 })
+//get distinct list of municipalities
+router.get('/get_mun', (req, res) => {
+  Lists.distinct("nom_fr", function (err, docs) {
+    if (docs) {
+      let result=[],obj={};
+      docs.sort()
+      for (let i = 0; i < docs.length; i++) {
+        const element = docs[i];
+        obj={};
+        obj.value=element;obj.label=element
+        result.push(obj);
+        
+      }
+      res.json(result);//[Ariana,Beja....] --should be transformed to------>[{value:'Ariana',label:'Ariana'},{}] 
+      //console.log(docs);
+    } else {
+      console.log('err', err);
+    }
+
+  })
+
+})
 module.exports = router;

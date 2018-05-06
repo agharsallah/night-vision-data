@@ -14,7 +14,25 @@ import 'react-select/dist/react-select.css';
 export default class RootCrowdsourcing extends Component {
   constructor(props) {
     super(props);
-    this.state = { username: '', selectedMun: 'Ariana', visibility: 'hidden', saisirInfo: true, listsInfo: [] }
+    this.state = { username: '', selectedMun: 'Ariana', visibility: 'hidden', saisirInfo: true, listsInfo: [], munLists: [] }
+  }
+
+  componentWillMount() {
+    //get the list of existing municipalities list
+    let qString = config.crowdUrl + "/api/get_mun";
+    axios({
+      method: 'get',
+      url: qString,
+
+    })
+      .then(response => {
+        console.log(response.data);
+        this.setState({ munLists: response.data });
+      }
+      )
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   getValidationState() {
@@ -32,7 +50,6 @@ export default class RootCrowdsourcing extends Component {
     this.setState({ selectedMun: selectedMun.value });
   }
   handleButtonClick() {
-    console.log();
     //send get req of the lists
     let qString = config.crowdUrl + "/api/get_lists";
     axios({
@@ -51,13 +68,13 @@ export default class RootCrowdsourcing extends Component {
         console.log(error);
       });
   }
+
   render() {
     let { chosenViz } = this.state;
     const TITLE = <Translate type='text' content='crowdSource.title1' />//please choose Municipality and username
     const TITLEUSERNAME = <Translate type='text' content='crowdSource.title_username' />//please enter Username
     const SELECTMUN = <Translate type='text' content='crowdSource.selectMun' />//please select municipality
     const SUBMIT = <Translate type='text' content='crowdSource.submit' />//submit
-    const options = [{ value: "Ariana", label: "Ariana" }, { value: "El Maagoula", label: "El Maagoula" }, { value: "Beja", label: "Beja" }]
     return (
       <div>
         <section >
@@ -93,7 +110,7 @@ export default class RootCrowdsourcing extends Component {
                       name="gouvernorate_chousing"
                       placeholder={SELECTMUN}
                       value={this.state.selectedMun}
-                      options={options}
+                      options={this.state.munLists}
                       onChange={this.handleSelectedMun.bind(this)}
                       style={{ marginBottom: '5vh' }}
                     />
@@ -104,7 +121,7 @@ export default class RootCrowdsourcing extends Component {
                 </div>
               </div>
             </div>
-            : <TreatInfo lists={this.state.listsInfo} username={this.state.username}  selectedMun={this.state.selectedMun} />}
+            : <TreatInfo lists={this.state.listsInfo} username={this.state.username} selectedMun={this.state.selectedMun} />}
         </section>
       </div>
     );

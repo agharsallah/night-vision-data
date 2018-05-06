@@ -47,6 +47,6 @@
     "react-translate-component": "^0.15.1",
     "redux": "^3.7.2",
     "redux-promise": "^0.5.3",
-    "style-loader": "^0.21.0",
+    "style-loader": "^0.21.0"
   }
 }

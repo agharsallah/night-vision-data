@@ -1,4 +1,5 @@
 # Night Vision Data
+[![Join the chat at https://gitter.im/mozilla/global-sprint-2018](https://badges.gitter.im/mozilla/global-sprint-2017.svg)](https://gitter.im/night-vision-data/Lobby)
 
  Night Vision Data is a web app that will mostly work with Governments data to make informations more Open and Presentable to citizens and society so that they can clearly understand what’s happening under the hood.
  This plateform will help 'unjailing' the data. A sort of collaborative data crowdsourcing.

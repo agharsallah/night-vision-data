@@ -73,4 +73,20 @@ router.get('/get_mun', (req, res) => {
   })
 
 })
+
+//Get submission data 
+router.get('/get_all_submission', (req, res) => {
+  console.log(req.query.nom_fr);
+  Lists.find({  }, function (err, docs) {
+    if (docs) {
+      res.json(docs);
+    } else {
+      console.log('err', err);
+    }
+
+  })
+})
+
+
+
 module.exports = router;

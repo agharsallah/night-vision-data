@@ -108,7 +108,7 @@ module.exports = {
         title_username:'Please enter a username',
         selectMun:'Please select a municipality',
         submit:'Submit',
-        numberPaper:'Please enter number of paper',
+        numberPaper:'Please enter number of ballot',
         blank:'Please enter number of blank',
         total:'Please enter number of total ballots',
         spoiled:'Please enter number of spoiled',

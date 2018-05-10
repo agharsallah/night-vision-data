@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import RootCrowdsourcing from './components/crowdsourcing/RootCrowdsourcing' ;
+//import RootAdmin from './components/admin/RootAdmin' ;
 import counterpart  from 'counterpart';
 counterpart.registerTranslations('en',require('./../locales/en'));
 counterpart.registerTranslations('fr',require('./../locales/fr'));
@@ -12,6 +13,7 @@ export default class App extends Component {
       <Switch>
 
       <Route exact path="/" component={RootCrowdsourcing} />
+      {/* <Route exact path="/admin" component={RootAdmin} /> */}
 
       </Switch>
     );

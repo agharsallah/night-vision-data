@@ -10,13 +10,6 @@
 ## Welcome !
 
 Thank you so much for stopping by! We're Looking forward to collaborate with you whether you're from a technical or non technical background . Please feel free to add comments and questions.
-## Contributing
-
-Thanks for your interest in contributing to Night Vision Data! There are many ways to contribute. To get started, take a look at [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Participation Guidelines
-
-This project adheres to  [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/). By participating, you are expected to uphold this code.
 
 ## How to install
 1. Install mongo db on your machine or provide a link to a hosted instance
@@ -33,6 +26,14 @@ This project adheres to  [Mozilla Community Participation Guidelines](https://ww
 2. Change the config file server link under `./frontend/src/components/config.js` 
 3. whange `webpack.config-build` to `webpack.config` and instead of `npm start ` run `webpack`
     * the bundle file will be generated under `./frontend/dist/static`
+
+## Contributing
+
+Thanks for your interest in contributing to Night Vision Data! There are many ways to contribute. To get started, take a look at [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Participation Guidelines
+
+This project adheres to  [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/). By participating, you are expected to uphold this code.
 
 ## Licence
 [MIT](LICENSE)

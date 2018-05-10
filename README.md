@@ -18,8 +18,8 @@ Thank you so much for stopping by! We're Looking forward to collaborate with you
     * Go to  `./data` and execute `mongoimport --db night-vision-data --collection lists --type json  --file  ./Ariana.json --jsonArray`
     * You can also add another gov `mongoimport --db night-vision-data --collection lists --type json  --file  ./Beja.json --jsonArray`
     * we would be able to add all the lists at once when the file is ready
-4. Start the backend server (node.js) go to `./backend` and type `npm start`
-5. Start the front-end (React - webpack) go to `./ frontend ` and type `npm start`
+4. Start the backend server (node.js) go to `./backend` and type `npm install` then `npm start`
+5. Start the front-end (React - webpack) go to `./ frontend ` and type `npm install` then `npm start
 6. Open the browser ` localhost:3000`
 ## Deploy
 1. Host the Rest api on a server

@@ -10,7 +10,7 @@ import history from './history';
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 import counterpart  from 'counterpart';
 import Translate    from 'react-translate-component';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 counterpart.registerTranslations('en',require('../locales/en'));
 counterpart.registerTranslations('fr',require('../locales/fr'));
@@ -19,11 +19,9 @@ const render = Component => {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <AppContainer>
-      <MuiThemeProvider>
       <Router history={history}>
         <App />
         </Router>
-        </MuiThemeProvider>
       </AppContainer>
     </Provider>,
     document.getElementById('container')
